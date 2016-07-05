@@ -1,0 +1,154 @@
+// PROPERTIES FOR THE FLEX CONTAINER
+/* Sets the container to be a flexbox one */
+.common-display-flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -o-flex;
+  display: flex;
+}
+/*
+The flex-direction property specifies how flex items are placed in the flex container, by setting the direction of the flex container’s main axis. This determines the direction in which flex items are laid out.
+Default: row
+Values: row | row-reverse | column | column-reverse
+*/
+.flex-direction(@aDirection) {
+  -webkit-flex-direction: @aDirection;
+  -ms-flex-direction: @aDirection;
+  -moz-flex-direction: @aDirection;
+  -o-flex-direction: @aDirection;
+  flex-direction: @aDirection;
+}
+/*
+The flex-wrap property controls whether the flex container is single-line or multi-line, and the direction of the cross-axis, which determines the direction new lines are stacked in.
+Defaut: no-wrap
+Values: nowrap | wrap | wrap-reverse
+*/
+.flex-wrap(@aWrap) {
+  -webkit-flex-wrap: @aWrap;
+  -ms-flex-wrap: @aWrap;
+  -moz-flex-wrap: @aWrap;
+  -o-flex-wrap: @aWrap;
+  flex-wrap: @aWrap;
+}
+/* Flex Flow
+The flex-flow CSS property is a shorthand property for flex-direction and flex-wrap individual properties.
+Default: flex-direction: row, flex-wrap: nowrap.
+Values: flex-flow: <‘flex-direction’> || <‘flex-wrap’>
+*/
+.flex-flow(@flexDirection, @flexWrap) {
+  -webkit-flex-flow: @flexDirection, @flexWrap;
+  -ms-flex-flow: @flexDirection, @flexWrap;
+  -moz-flex-flow: @flexDirection, @flexWrap;
+  -o-flex-flow: @flexDirection, @flexWrap;
+  flex-flow: @flexDirection @flexWrap;
+}
+/*
+Justify Content
+The CSS justify-content property defines how the browser distributes space between and around flex items along the main-axis of their container.
+If there is at least one flexible element, with flex-grow different from 0, it will have no effect as there won't be any available space.
+Default: flex-start
+Values: flex-start | flex-end | center | space-between | space-around;
+*/
+.justify-content(@alignment) {
+  -webkit-justify-content: @alignment;
+  -ms-justify-content: @alignment;
+  -moz-justify-content: @alignment;
+  -o-justify-content: @alignment;
+  justify-content: @alignment;
+}
+/*
+Align Items
+The CSS align-items property aligns flex items of the current flex line the same way as justify-content but in the perpendicular direction.
+Default: initial
+Values: flex-start | flex-end | center | baseline | stretch
+*/
+.align-items(@alignment) {
+  -webkit-align-items: @alignment;
+  -ms-align-items: @alignment;
+  -moz-align-items: @alignment;
+  -o-align-items: @alignment;
+  align-items: @alignment;
+}
+/*
+Align Content
+The CSS align-content property aligns a flex container's lines within the flex container when there is extra space on the cross-axis.
+Default: stretch
+Values: flex-start | flex-end | center | space-between | space-around | stretch
+NOT SUPPORTED IE
+*/
+.align-content(@alignment) {
+  -webkit-align-content: @alignment;
+  -ms-align-content: @alignment;
+  -moz-align-content: @alignment;
+  -o-align-content: @alignment;
+  align-content: @alignment;
+}
+// PROPERTIES FOR FLEX ITEMS
+/* Order
+The CSS order property specifies the order used to lay out flex items in their flex container. Elements are laid out in the ascending order of the order value. Elements with the same order value are laid out in the order in which they appear in the source code.
+Default value: 0
+*/
+.order(@aNumber) {
+  -webkit-order: @aNumber;
+  -ms-flex-order: @aNumber;
+  -moz-order: @aNumber;
+  -o-order: @aNumber;
+  order: @aNumber;
+}
+/* Flex Grow
+The flex-grow CSS property specifies the flex grow factor of a flex item. It specifies what amount of space inside the flex container the item should take up.
+Default value: 0
+*/
+.flex-grow(@aNumber) {
+  -webkit-flex-grow: @aNumber;
+  -ms-flex-grow: @aNumber;
+  -moz-flex-grow: @aNumber;
+  -o-flex-grow: @aNumber;
+  flex-grow: @aNumber;
+}
+/* Flex Shrink
+The flex-shrink CSS property specifies the flex shrink factor of a flex item.
+Default: 1
+*/
+.flex-shrink(@aNumber) {
+  -webkit-flex-shrink: @aNumber;
+  -ms-flex-shrink: @aNumber;
+  -moz-flex-shrink: @aNumber;
+  -o-flex-shrink: @aNumber;
+  flex-shrink: @aNumber;
+}
+/*Flex Basis
+The flex-basis CSS property specifies the flex basis which is the initial main size of a flex item. This property determines the size of the content-box unless specified otherwise using box-sizing.
+Default: auto
+*/
+.flex-basis(@aNumber) {
+  -webkit-flex-basis: @aNumber;
+  -ms-flex-basis: @aNumber;
+  -moz-flex-basis: @aNumber;
+  -o-flex-basis: @aNumber;
+  flex-basis: @aNumber;
+}
+/* Flex
+The flex CSS property is a shorthand property specifying the ability of a flex item to alter its dimensions to fill available space. Flex items can be stretched to use available space proportional to their flex grow factor or their flex shrink factor to prevent overflow.
+Defaut: flex-grow: 0, flex-shrink: 1, flex-basis: auto
+*/
+.flex-shorthand(@flexGrow, @flexShrink, @flexBasis) {
+  -webkit-flex: @flexGrow @flexShrink @flexBasis;
+  -moz-flex: @flexGrow @flexShrink @flexBasis;
+  -ms-flex: @flexGrow @flexShrink @flexBasis;
+  -o-flex: @flexGrow @flexShrink @flexBasis;
+  flex: @flexGrow @flexShrink @flexBasis;
+}
+/* Align self
+The align-self CSS property aligns flex items of the current flex line overriding the align-items value. If any of the flex item's cross-axis margin is set to auto, then align-self is ignored.
+Default: auto
+Values: auto | flex-start | flex-end | center | baseline | stretch
+*/
+.align-self(@anAlignment) {
+  -webkit-align-self: @anAlignment;
+  -moz-align-self: @anAlignment;
+  -ms-align-self: @anAlignment;
+  -o-align-self: @anAlignment;
+  align-self: @anAlignment;
+}

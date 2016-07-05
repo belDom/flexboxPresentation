@@ -1,0 +1,93 @@
+{
+	"Common display flex": {
+		"prefix": "commondisplayflex",
+		"body": [
+			".common-display-flex;"
+		],
+		"description": ".common-display-flex;"
+	},
+	"Flex direction": {
+		"prefix": "common-flex-direction",
+		"body": [
+			".flex-direction(${1:row | row-reverse | column | column-reverse});"
+		],
+		"description": "Default: row"
+	},
+	"Flex wrap": {
+		"prefix": "common-flex-wrap",
+		"body": [
+			".flex-wrap(${1:nowrap | wrap | wrap-reverse});"
+		],
+		"description": "Default: nowrap"
+	},
+	"Flex flow": {
+		"prefix": "common-flex-flow",
+		"body": [
+			".flex-flow(${1:Flex direction}, ${2: Flex wrap});"
+		],
+		"description": "Default: row, nowrap"
+	},
+	"Justify content": {
+		"prefix": "common-justify-content",
+		"body": [
+			".justify-content(${1:flex-start | flex-end | center | space-between | space-around});"
+		],
+		"description": "Default: flex-start"
+	},
+	"Align items": {
+		"prefix": "common-align-items",
+		"body": [
+			".align-items(${1:flex-start | flex-end | center | baseline | stretch});"
+		],
+		"description": "Default: initial"
+	},
+	"Align content": {
+		"prefix": "common-align-content",
+		"body": [
+			".align-content(${1:flex-start | flex-end | center | space-between | space-around | stretch});"
+		],
+		"description": "Default: stretch"
+	},
+	"Order": {
+		"prefix": "common-flex-order",
+		"body": [
+			".order(${1:Position number});"
+		],
+		"description": "Default: 0"
+	},
+	"Flex grow": {
+		"prefix": "common-flex-grow",
+		"body": [
+			".flex-grow(${1:A number});"
+		],
+		"description": "Default: 0"
+	},
+	"Flex shrink": {
+		"prefix": "common-flex-shrink",
+		"body": [
+			".flex-shrink(${1:A number});"
+		],
+		"description": "Default: 1"
+	},
+	"Flex basis": {
+		"prefix": "common-flex-basis",
+		"body": [
+			".flex-basis(${1:A number});"
+		],
+		"description": "Default: auto"
+	},
+	"Flex shorthand": {
+		"prefix": "common-flex-shorthand",
+		"body": [
+			".flex(${1:Flex grow}, ${2:Flex shrink}, ${3:Flex basis});"
+		],
+		"description": "Default: 0 1 auto"
+	},
+	"Align self": {
+		"prefix": "common-align-self",
+		"body": [
+			".align-self(${1auto | flex-start | flex-end | center | baseline | stretch:});"
+		],
+		"description": "Default: auto"
+	},
+}
